@@ -21,10 +21,10 @@ function computerChoiceGenerator() {
 
 function handleRoundPoints(computerChoice, losingOption) {
     if (computerChoice === losingOption) {
-        console.log('Player Wins')
+        alert('Player Wins')
         playerScore.textContent++;
     } else {
-        console.log('Computer Wins')
+        alert('Computer Wins')
         computerScore.textContent++;
     }
 }
@@ -44,7 +44,7 @@ function handlePlayerChoice(event) {
 
     // If the playerChoice is the same as the computerChoice it is a draw
     if (playerChoice === computerChoice) {
-        console.log('It is a draw')
+        alert('It is a draw')
     } else {
 
         // We then check the playerChoice, then calling handleRoundPoints
