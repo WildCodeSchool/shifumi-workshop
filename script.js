@@ -1,4 +1,8 @@
-// Write your javaScript code here
+// We get the player scoreboard and set it to 0 to start the game
+let playerScore = document.getElementById('playerScore');
+
+// We get the computer scoreboard and set it to 0 to start the game
+let computerScore = document.getElementById('computerScore');
 
 function computerChoiceGenerator() {
     // An array containing all of the possible game options
@@ -18,8 +22,10 @@ function computerChoiceGenerator() {
 function handleRoundPoints(computerChoice, losingOption) {
     if (computerChoice === losingOption) {
         console.log('Player Wins')
+        playerScore.textContent++;
     } else {
         console.log('Computer Wins')
+        computerScore.textContent++;
     }
 }
 
