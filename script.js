@@ -15,6 +15,15 @@ function computerChoiceGenerator() {
 }
 
 
+function handleRoundPoints(computerChoice, losingOption) {
+    if (computerChoice === losingOption) {
+        console.log('Player Wins')
+    } else {
+        console.log('Computer Wins')
+    }
+}
+
+
 // this function is used to handle the players decision
 function handlePlayerChoice(playerChoiceValue) {
 
@@ -31,8 +40,11 @@ function handlePlayerChoice(playerChoiceValue) {
         console.log('It is a draw')
     } else {
 
-        // else the player or computer wins
-        console.log('Player or computer wins')
+        // We then check the playerChoice, then calling handleRoundPoints
+        // passing the computerChoice with the option it can lose to
+        if (playerChoice === 'rock') handleRoundPoints(computerChoice, 'scissors')
+        if (playerChoice === 'paper') handleRoundPoints(computerChoice, 'rock')
+        if (playerChoice === 'scissors') handleRoundPoints(computerChoice, 'paper')
     }
 
 }
