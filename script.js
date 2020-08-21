@@ -35,6 +35,7 @@ function handlePlayerChoice(event) {
     let computerChoice = computerChoiceGenerator()
 
 
+
     // If the playerChoice is the same as the computerChoice it is a draw
     if (playerChoice === computerChoice) {
         console.log('It is a draw')
