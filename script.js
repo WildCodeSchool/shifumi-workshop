@@ -51,3 +51,13 @@ function handlePlayerChoice(playerChoiceValue) {
 
 // The function is called here passing in the players choice with the value 'rock'
 handlePlayerChoice('rock')
+
+
+// get all of the game buttons into an array
+const gameButtons = document.getElementsByClassName('gameButton');
+
+// loop through all of the buttons and add an event listener to each button
+// this is used to handle the players choice
+for (let i = 0; i < gameButtons.length; i++) {
+    gameButtons[i].addEventListener('click', handlePlayerChoice)
+}
