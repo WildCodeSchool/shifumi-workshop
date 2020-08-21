@@ -25,15 +25,15 @@ function handleRoundPoints(computerChoice, losingOption) {
 
 
 // this function is used to handle the players decision
-function handlePlayerChoice(playerChoiceValue) {
-
-    let playerChoice = playerChoiceValue;
+function handlePlayerChoice(event) {
+    // the event comes from the game button click
+    // this then takes the id value from each button
+    let playerChoice = event.currentTarget.id;
 
     // the computer choice has a called computerChoiceGenerator 
     // which returns randomly either rock, paper or scissors
     let computerChoice = computerChoiceGenerator()
 
-    console.log(computerChoice)
 
     // If the playerChoice is the same as the computerChoice it is a draw
     if (playerChoice === computerChoice) {
