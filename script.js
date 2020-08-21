@@ -50,7 +50,9 @@ function handlePlayerChoice(playerChoiceValue) {
 }
 
 // The function is called here passing in the players choice with the value 'rock'
-handlePlayerChoice('rock')
+// this function call is now removed due to the game buttons 
+// calling the function dynamically
+// handlePlayerChoice('rock')
 
 
 // get all of the game buttons into an array
